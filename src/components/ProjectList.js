@@ -4,7 +4,9 @@ import { useSelector } from "react-redux";
 function ProjectListComponent() {
   const projectState = useSelector(state => state.ProjectReducer);
 
-  const projectList = projectState.map(project => <div>{project.name}</div>);
+  const projectList = projectState.map(project => (
+    <div key={project.author}>{project.name}</div>
+  ));
 
   return <>{projectList}</>;
 }
