@@ -1,4 +1,4 @@
-import { ProjectState } from "../reducers/projectReduces";
+/* import { ProjectState } from "../reducers/projectReduces";
 
 export function CREATE_PROJECT(payload: ProjectState) {
   return {
@@ -7,9 +7,15 @@ export function CREATE_PROJECT(payload: ProjectState) {
   };
 }
 
-export function DELETE_PROJECT(payload: { name: string }) {
+export function DELETE_PROJECT(payload: ProjectState) {
   return {
     type: "DELETE_PROJECT",
     payload
   };
 }
+ */
+
+import { createAction } from "@reduxjs/toolkit";
+
+export const createProject = createAction("CREATE_PROJECT");
+export const deleteProject = createAction("DELETE_PROJECT");
